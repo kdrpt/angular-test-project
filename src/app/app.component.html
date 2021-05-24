@@ -1,0 +1,19 @@
+<div class="app-container mat-app-background"
+     [ngClass]="(isDarkTheme$ | async) ? 'theme-dark' : 'theme-default'">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>X01 Match</span>
+      <span class="spacer"></span>
+      <button #toggleThemeButton mat-icon-button (click)="toggleTheme()" matTooltip="Toggle Theme">
+        <mat-icon>{{(isDarkTheme$ | async) ? 'light_mode' : 'dark_mode'}}</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+  <div class="data-table">
+    <p class="data-table-title mat-title">Data Table</p>
+  </div>
+
+</div>
